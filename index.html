@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nomads Cafe x Art</title>
+<meta name="description" content="Nomads Cafe x Art in Dumas, Surat. Coffee, hand-tossed pizzas, fresh pasta and all-day breakfast in a garden art cafe. More than an eatery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Caveat:wght@500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Logo: SVG redraw of the Nomads mark. Replace with the owner's original logo file when it arrives. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="nomads-mark" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50" fill="#B3312C"/>
+    <rect x="29" y="24" width="42" height="50" fill="#F5EDD8"/>
+    <path d="M29 30 C 50 34, 62 52, 64 74 L 54 74 C 52 56, 43 44, 29 42 Z" fill="#B3312C"/>
+    <path d="M71 24 a 16 16 0 0 0 -16 0" fill="none" stroke="#B3312C" stroke-width="2.4"/>
+    <path d="M71 29 a 11 11 0 0 0 -11 0" fill="none" stroke="#B3312C" stroke-width="2.4"/>
+    <path d="M71 34 a 6 6 0 0 0 -6 0" fill="none" stroke="#B3312C" stroke-width="2.4"/>
+    <text x="30" y="20" font-family="Inter Tight, Arial, sans-serif" font-size="5" font-weight="700" fill="#F5EDD8">CAFE</text>
+    <text x="61" y="20" font-family="Inter Tight, Arial, sans-serif" font-size="5" font-weight="700" fill="#F5EDD8">xART</text>
+    <text x="50" y="85" text-anchor="middle" font-family="Inter Tight, Arial, sans-serif" font-size="8" font-weight="800" letter-spacing="1.6" fill="#F5EDD8">NOMADS</text>
+  </symbol>
+</svg>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Nomads Cafe x Art, back to top">
+      <svg class="brand-mark" aria-hidden="true"><use href="#nomads-mark"/></svg>
+      <span class="brand-name">Nomads <em>cafe x art</em></span>
+    </a>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="#menu">Menu</a>
+      <a href="#breakfast">Weekend Breakfast</a>
+      <a href="#art">Art &amp; Studio</a>
+      <a href="#garden">The Garden</a>
+      <a href="#book">Book</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-img" src="assets/img/entrance.jpg" alt="The arched entrance of Nomads, reached along a path under tall trees">
+    <div class="hero-shade"></div>
+    <div class="hero-content wrap">
+      <p class="eyebrow eyebrow-light">Cafe x Art &middot; Dumas, Surat</p>
+      <h1 class="hero-title">More than<br>an eatery</h1>
+      <p class="hero-sub">Espresso, hand-tossed pizza and fresh pasta, served in a garden of brick, trees and lotus ponds.</p>
+      <div class="hero-actions">
+        <a class="btn btn-red" href="#menu">View Menu</a>
+        <a class="btn btn-ghost" href="#visit">Find Us</a>
+      </div>
+      <p class="hero-hours" id="open-status">Mon to Sat 12:00 pm to 11:30 pm &middot; Sun 9:00 am to 11:00 pm</p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="section story reveal" id="story">
+    <div class="wrap story-grid">
+      <div class="story-text">
+        <p class="eyebrow">Our story</p>
+        <h2>A garden cafe with <em>an Italian heart.</em></h2>
+        <p class="lead">Nomads sits under old trees in Dumas: terracotta brick walls, wooden decks over a lily pond, and arched windows that open onto green. It is a place to stop, sit and stay a while.</p>
+        <p>We pull espresso all day, toss 12" pizzas by hand, and cook pasta to order. On weekends breakfast runs all day. Between meals the walls turn into a gallery for local artists and homegrown brands.</p>
+        <ul class="facts">
+          <li><strong>10</strong><span>hand-tossed pizzas</span></li>
+          <li><strong>25</strong><span>coffees on the bar</span></li>
+          <li><strong>7</strong><span>days a week</span></li>
+        </ul>
+      </div>
+      <figure class="arch-photo">
+        <img src="assets/img/arched-window.jpg" alt="An arched window at Nomads looking out onto the garden path">
+      </figure>
+    </div>
+  </section>
+
+  <!-- COFFEE -->
+  <section class="section dark coffee reveal" id="coffee">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow eyebrow-caramel">The coffee bar</p>
+        <h2>From a straight espresso to <em>barrel-aged cold brew.</em></h2>
+        <p class="muted">Espresso drinks, V60 pour over and a cold brew list that runs from classic to cherry old fashioned. Soy, almond or oat milk on request.</p>
+      </div>
+      <div class="coffee-grid" id="coffee-picks"></div>
+    </div>
+  </section>
+
+  <!-- ITALIAN -->
+  <section class="section italian reveal" id="italian">
+    <div class="wrap italian-grid">
+      <figure class="photo-card">
+        <img src="assets/img/pizza.jpg" alt="A Cancun pizza with salads and dips on a stone table at Nomads">
+        <figcaption class="chip">Hand-tossed &middot; 12 inch</figcaption>
+      </figure>
+      <div>
+        <p class="eyebrow">From the oven</p>
+        <h2>Hand-tossed pizza, <em>proper pasta.</em></h2>
+        <p class="lead">Our pizza base is made in house and topped simply: buffalo mozzarella and basil, six cheeses, or truffle and mushroom. Pasta is tossed to order in garlic and olive oil, pomodoro or pesto.</p>
+        <ul class="dish-list" id="italian-picks"></ul>
+        <a class="text-link" href="#menu" data-tab="italian">See all pizzas and pasta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="section menu reveal" id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The menu</p>
+        <h2>Something for <em>every hour</em> of the day.</h2>
+        <p class="muted">Prices in rupees, exclusive of GST. No MSG. One portion serves two. <span class="star">&#9733;</span> marks a house favourite.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Menu sections" id="menu-tabs"></div>
+      <div class="menu-panel" id="menu-panel" role="tabpanel" tabindex="0"></div>
+      <p class="menu-note">Food can take up to 45 minutes during peak hours and 30 minutes at other times.</p>
+    </div>
+  </section>
+
+  <!-- WEEKEND BREAKFAST -->
+  <section class="section garden-dark breakfast reveal" id="breakfast">
+    <div class="wrap breakfast-grid">
+      <div>
+        <p class="eyebrow eyebrow-caramel">Weekend ritual</p>
+        <h2>Breakfast, Saturday and Sunday, <em>all day.</em></h2>
+        <p class="lead">Idli and benne dosa, chole with Goan poi, sourdough toasts, acai bowls and a stack of pancakes. Bring your friends and family. Reserve a table or just walk in.</p>
+        <ul class="dish-list light" id="breakfast-picks"></ul>
+        <div class="hero-actions">
+          <a class="btn btn-red" href="#menu" data-tab="breakfast">Breakfast menu</a>
+          <a class="btn btn-ghost" href="#book">Reserve a table</a>
+        </div>
+      </div>
+      <div class="breakfast-photos">
+        <figure class="photo-card tall"><img src="assets/img/pancakes.jpg" alt="Pancakes with chocolate chips and syrup"></figure>
+        <figure class="photo-card"><img src="assets/img/breakfast-plates.jpg" alt="A latte and two breakfast plates on a blue patterned cloth"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ART -->
+  <section class="section art reveal" id="art">
+    <div class="wrap art-grid">
+      <div class="art-photos">
+        <figure class="arch-photo small"><img src="assets/img/brick-wall.jpg" alt="Artwork hung on the terracotta brick wall above a wooden bench"></figure>
+        <figure class="photo-card"><img src="assets/img/studio.jpg" alt="A rail of linen clothes from a local label in the Nomads studio"></figure>
+      </div>
+      <div>
+        <p class="eyebrow">Surat's only art cafe</p>
+        <h2>What is art <em>to you?</em></h2>
+        <p class="lead">Nomads has a studio and exhibition space built for brands with a story worth telling in person. Local artists, makers and labels show their work on our walls and rails.</p>
+        <p>If you are a niche brand in Surat and want to be part of the space, message us on Instagram.</p>
+        <a class="btn btn-red" href="https://instagram.com/nomadsxart" target="_blank" rel="noopener">Message @nomadsxart</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARDEN -->
+  <section class="section garden reveal" id="garden">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">The garden</p>
+        <h2>You finally <em>touched grass.</em></h2>
+      </div>
+      <div class="gallery">
+        <figure><img src="assets/img/cottage.jpg" alt="The brick cottage under a tree canopy"></figure>
+        <figure><img src="assets/img/lotus-pond.jpg" alt="Pink lotus flowers in the pond"></figure>
+        <figure><img src="assets/img/flowers.jpg" alt="Yellow flowers in the garden beds"></figure>
+        <figure><img src="assets/img/cheesecake.jpg" alt="Cheesecake by the window"></figure>
+        <figure><img src="assets/img/fries.jpg" alt="Fries at an outdoor table under string lights"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="section dark visit reveal" id="visit">
+    <div class="wrap visit-grid">
+      <div>
+        <p class="eyebrow eyebrow-caramel">Visit us</p>
+        <h2>Come find us <em>in Dumas.</em></h2>
+        <address class="address" id="address-text">Dumas Village Rd, Sultanabad, Dumas,<br>Surat, Gujarat 394550</address>
+        <p class="phone-line"><a href="tel:+919408769918">+91 94087 69918</a> &middot; <a href="https://wa.me/919408769918" target="_blank" rel="noopener">WhatsApp us</a></p>
+        <div class="hero-actions">
+          <a class="btn btn-red" href="https://www.google.com/maps/search/?api=1&amp;query=Nomads+Cafe+Dumas+Village+Rd+Sultanabad+Surat" target="_blank" rel="noopener">Open in Google Maps</a>
+          <button class="btn btn-ghost" type="button" id="copy-address">Copy address</button>
+        </div>
+      </div>
+      <div class="visit-side">
+        <table class="hours">
+          <caption class="eyebrow eyebrow-caramel">Opening hours</caption>
+          <tbody>
+            <tr data-days="1,2,3,4,5,6"><th scope="row">Monday to Saturday</th><td>12:00 pm to 11:30 pm</td></tr>
+            <tr data-days="0"><th scope="row">Sunday</th><td>9:00 am to 11:00 pm</td></tr>
+            <tr><th scope="row">Weekend breakfast</th><td>Sat and Sun, all day</td></tr>
+          </tbody>
+        </table>
+        <p class="postcard">coffee, cute corners, homegrown brands and a photobooth too. come do a little day trip with us.</p>
+        <ul class="social">
+          <li><a href="https://instagram.com/nomadsxart" target="_blank" rel="noopener">Instagram @nomadsxart</a></li>
+          <li><a href="https://linktr.ee/nomadsxart" target="_blank" rel="noopener">linktr.ee/nomadsxart</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section class="section book reveal" id="book">
+    <div class="wrap book-grid">
+      <div class="book-text">
+        <p class="eyebrow">Book a table</p>
+        <h2>Reserve in <em>one tap</em> on WhatsApp.</h2>
+        <p class="lead">Fill this in and we open WhatsApp with your details already typed out. Send it, and we will confirm your table shortly.</p>
+        <ul class="book-facts">
+          <li><span class="bf-label">Weekend breakfast</span><span class="bf-value">Sat and Sun, all day. Book ahead, we fill up.</span></li>
+          <li><span class="bf-label">Groups of 8+</span><span class="bf-value">Message us on WhatsApp so we can set the long table.</span></li>
+          <li><span class="bf-label">Events and art shows</span><span class="bf-value">Studio and gallery space available. Ask for the dates.</span></li>
+        </ul>
+        <a class="btn btn-wa btn-wa-light" id="wa-direct" href="#" target="_blank" rel="noopener">
+          <svg class="wa-logo" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#25D366"/><path transform="translate(3.6 3.6) scale(.7)" fill="#fff" d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 4.99L2 22l5.2-1.36a9.94 9.94 0 0 0 4.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96A9.9 9.9 0 0 0 19.1 4.9 9.9 9.9 0 0 0 12.04 2Zm0 18.16h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.1.81.83-3.02-.2-.31a8.19 8.19 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.24-8.24a8.24 8.24 0 0 1 8.23 8.25c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.71c-.14-.24-.01-.37.11-.49.11-.11.25-.29.37-.44.13-.15.17-.25.25-.41.09-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.41-.56-.42h-.47c-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.65 4.21 3.72.59.25 1.05.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.17-.47-.29Z"/></svg>
+          Message us on WhatsApp
+        </a>
+        <p class="book-note" id="book-note">We reply during cafe hours, usually within an hour.</p>
+      </div>
+
+      <form class="book-form" id="book-form" novalidate>
+        <p class="eyebrow">Your booking</p>
+        <div class="field">
+          <label for="bf-name">Name</label>
+          <input id="bf-name" name="name" type="text" autocomplete="name" required placeholder="Your name">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="bf-date">Date</label>
+            <input id="bf-date" name="date" type="date" required>
+          </div>
+          <div class="field">
+            <label for="bf-time">Time</label>
+            <input id="bf-time" name="time" type="time" required>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="bf-guests">Guests</label>
+            <select id="bf-guests" name="guests">
+              <option>1 guest</option>
+              <option selected>2 guests</option>
+              <option>3 guests</option>
+              <option>4 guests</option>
+              <option>5 guests</option>
+              <option>6 guests</option>
+              <option>7 guests</option>
+              <option>8+ guests (we will call you)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bf-occasion">Occasion</label>
+            <select id="bf-occasion" name="occasion">
+              <option selected>Just coffee and food</option>
+              <option>Weekend breakfast</option>
+              <option>Birthday</option>
+              <option>Date night</option>
+              <option>Business meeting</option>
+              <option>Art show or event</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="bf-notes">Anything we should know <span class="opt">(optional)</span></label>
+          <textarea id="bf-notes" name="notes" rows="3" placeholder="Allergies, a high chair, seating in the garden..."></textarea>
+        </div>
+        <button class="btn btn-red book-submit" type="submit">
+          <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 4.99L2 22l5.2-1.36a9.94 9.94 0 0 0 4.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96A9.9 9.9 0 0 0 19.1 4.9 9.9 9.9 0 0 0 12.04 2Zm0 18.16h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.1.81.83-3.02-.2-.31a8.19 8.19 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.24-8.24a8.24 8.24 0 0 1 8.23 8.25c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.71c-.14-.24-.01-.37.11-.49.11-.11.25-.29.37-.44.13-.15.17-.25.25-.41.09-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.41-.56-.42h-.47c-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.65 4.21 3.72.59.25 1.05.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.17-.47-.29Z"/></svg>
+          Book on WhatsApp
+        </button>
+        <p class="book-hint" id="book-hint" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <svg class="brand-mark" aria-hidden="true"><use href="#nomads-mark"/></svg>
+      <span class="brand-name">Nomads <em>cafe x art</em></span>
+    </a>
+    <p>Sister restaurant: <a href="https://instagram.com/varso.house" target="_blank" rel="noopener">Varso House</a></p>
+    <p class="small">&copy; 2026 Nomads Cafe x Art, Surat. Prices exclude GST.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script src="menu-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
