@@ -1,0 +1,8 @@
+# GitHub Pages: publish only the website. These files stay in the repo but are not served on the live site.
+exclude:
+  - CLAUDE.md
+  - README.md
+  - project-brief.md
+  - menu.md
+  - scripts/
+  - screenshots/

@@ -111,19 +111,33 @@
     const now = new Date();
     return new Date(now.getTime() + (now.getTimezoneOffset() + 330) * 60000);
   }
+  // Opening hours: the one place to edit. Days: 0 = Sunday. Times in minutes after midnight.
+  const HOURS = [
+    { label: "Monday to Saturday", days: [1, 2, 3, 4, 5, 6], open: 12 * 60, close: 23 * 60 + 30 },
+    { label: "Sunday", days: [0], open: 9 * 60, close: 23 * 60 },
+  ];
+  const fmtTime = (m) => {
+    const h = Math.floor(m / 60) % 24;
+    return `${h % 12 || 12}:${String(m % 60).padStart(2, "0")} ${h < 12 ? "am" : "pm"}`;
+  };
+  const span = (h) => `${fmtTime(h.open)} to ${fmtTime(h.close)}`;
+
   const t = istNow();
   const day = t.getDay();
   const mins = t.getHours() * 60 + t.getMinutes();
-  const [openM, closeM] = day === 0 ? [9 * 60, 23 * 60] : [12 * 60, 23 * 60 + 30];
-  const isOpen = mins >= openM && mins < closeM;
-  const status = document.getElementById("open-status");
-  status.innerHTML =
+  const today = HOURS.find((h) => h.days.includes(day));
+  const isOpen = !!today && mins >= today.open && mins < today.close;
+  document.getElementById("open-status").innerHTML =
     `<span class="open-dot${isOpen ? "" : " closed"}"></span>` +
     (isOpen ? "Open now" : "Closed now") +
-    ` &middot; today ${day === 0 ? "9:00 am to 11:00 pm" : "12:00 pm to 11:30 pm"}`;
-  document.querySelectorAll(".hours tr[data-days]").forEach((tr) => {
-    if (tr.dataset.days.split(",").includes(String(day))) tr.classList.add("today");
-  });
+    (today ? ` &middot; today ${span(today)}` : "");
+
+  // Rebuild the hours table rows from HOURS (the HTML rows are the no-JS fallback)
+  const hoursBody = document.querySelector(".hours tbody");
+  hoursBody.querySelectorAll("tr[data-days]").forEach((tr) => tr.remove());
+  hoursBody.insertAdjacentHTML("afterbegin", HOURS.map((h) =>
+    `<tr${h === today ? ' class="today"' : ""}><th scope="row">${esc(h.label)}</th><td>${span(h)}</td></tr>`
+  ).join(""));
 
   // ---------- Copy address ----------
   const copyBtn = document.getElementById("copy-address");
@@ -152,9 +166,11 @@
   const timeEl = document.getElementById("bf-time");
 
   // sensible defaults: tomorrow, 8pm
-  const tomorrow = new Date(Date.now() + 86400000);
-  dateEl.min = new Date().toISOString().slice(0, 10);
-  dateEl.value = tomorrow.toISOString().slice(0, 10);
+  // local date as YYYY-MM-DD (toISOString is UTC, which is a day behind in India after midnight)
+  const localISO = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const now = new Date();
+  dateEl.min = localISO(now);
+  dateEl.value = localISO(new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1));
   timeEl.value = "20:00";
 
   document.getElementById("wa-direct").href = waLink(GREETING);

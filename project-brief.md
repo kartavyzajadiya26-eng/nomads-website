@@ -4,7 +4,7 @@ Saved facts about the cafe and the website. This is the source of truth for ever
 Update it whenever the owner shares new information. Anything in `[BRACKETS]` is still unknown:
 do not invent it.
 
-_Last updated: 2026-09-29 (phone number + WhatsApp bookings added)_
+_Last updated: 2026-09-29 (live on GitHub Pages; code-review fixes)_
 
 ---
 
@@ -47,7 +47,7 @@ Coffee highlights: espresso bar, V60 pour over, barrel-aged cold brew, Cherry Ol
 - **Structure (default):** one-page site with Hero, About, Menu, Gallery, Visit Us, Footer.
 - **Tech (default):** HTML + CSS + vanilla JS.
 - **Domain / hosting:** GitHub Pages at https://kartavyzajadiya26-eng.github.io/nomads-website/ (public repo github.com/kartavyzajadiya26-eng/nomads-website). Custom domain [TBD].
-- **Final step (do last, before launch):** add tooltips that show short helper text on hover/tap across the site (owner's request, 2026-09-29).
+- **Status:** a preview is live on GitHub Pages. Before announcing it to customers: owner's original photos and logo, confirmed prices, then add tooltips as the last step (owner's request, 2026-09-29). See README "Before going live".
 
 ## Design inspiration
 
@@ -86,6 +86,7 @@ The place: terracotta brick cottage under big trees, lotus/lily pond, wooden dec
 
 ## Decisions log
 
+- 2026-09-29: Code review fixes: only website files are published (`_config.yml` excludes CLAUDE.md, the brief, menu.md, README, scripts/, screenshots/); sections stay visible without JavaScript; booking date uses the visitor's local date; Lenis loads with an integrity hash; opening hours live in one `HOURS` list in `script.js`. Note: the files under `assets/photos/`, `assets/inspiration/` and `assets/menu/` mentioned in this brief are not on disk; the site uses crops in `assets/img/`.
 - 2026-09-29: Project put on git and pushed to a public GitHub repo; site published with GitHub Pages from the main branch. Every push to main redeploys it.
 - 2026-09-29: Added slide-in animations (text from the left, photos from the right, lists staggered) and Lenis smooth scrolling loaded from jsDelivr. Both switch off for visitors who prefer reduced motion.
 - 2026-09-29: Owner asked to remove the "View Menu" and WhatsApp buttons from the header. The header now has only the logo, the nav links and the burger on mobile. The "Message us on WhatsApp" button in Book a table uses the green WhatsApp logo.

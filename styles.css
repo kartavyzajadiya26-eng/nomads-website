@@ -337,8 +337,9 @@ p { margin: 0; text-wrap: pretty; }
 /* Reveal on scroll: the section fades in, its parts slide in from the sides one after another */
 :root { --ease-out: cubic-bezier(.16, 1, .3, 1); }
 .section { overflow-x: clip; }
-.reveal { opacity: 0; transition: opacity .8s ease; }
-.reveal.is-visible { opacity: 1; }
+/* Hidden only when JS runs, so the page is still readable without it */
+.js .reveal { opacity: 0; transition: opacity .8s ease; }
+.js .reveal.is-visible { opacity: 1; }
 [data-slide] {
   opacity: 0;
   transition: opacity .9s var(--ease-out), transform 1.1s var(--ease-out);
@@ -355,5 +356,5 @@ html.lenis { scroll-behavior: auto; }
 .lenis.lenis-stopped { overflow: clip; }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal, [data-slide] { opacity: 1; transform: none; transition: none; }
+  .js .reveal, [data-slide] { opacity: 1; transform: none; transition: none; }
 }
